@@ -1,0 +1,21 @@
+<%-include('./components/header')  %> 
+
+
+	
+     
+      <div class="card" style="width: 18rem;">
+         <div class="card-body">
+      <h5 class="card-title"><%= user.title %> </h5>
+           <p class="card-text"> <%= user.article %> </p>
+	
+	<a class="btn btn-warning" href="/update-new-article/<%= user.id %>">Edit</a>
+	<a class="btn btn-danger" href="/delete-user/<%= user.id %>">Delete</a>
+
+	  
+         </div>
+       </div>
+
+
+
+
+<%-include('./components/footer')  %> 

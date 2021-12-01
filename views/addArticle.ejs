@@ -1,0 +1,31 @@
+<%-include('./components/header')  %> 
+
+
+<form  action="/add-new-article" method="POST">
+	<div class="form-group">
+	  <label for="exampleInputEmail1">title</label>
+	  <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+
+	<div class="container">
+	<%	if (errors && errors.title){ %> 
+		<span class="warning"><%= errors.title %> </span> 
+      <%}  %> 
+   </div>
+		</div>
+
+	<div class="form-group">
+	  <label for="exampleInputPassword1">Article</label>
+	  <input name="article" type="text" class="form-control" id="exampleInputPassword1" >
+
+	  <%	if (errors && errors.article){ %> 
+		<span class="warning"><%= errors.article %> </span> 
+      <%}  %> 
+ 
+	</div>
+
+	
+	<button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+     
+
+<%-include('./components/footer')  %> 

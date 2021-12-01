@@ -1,0 +1,25 @@
+<%-include('./components/header')  %> 
+<%-include('./components/nav')  %> 
+
+<%if(result.length > 0){  %> 
+	<% result.forEach((data) => {  %> 
+     
+      <div class="card" style="width: 18rem;">
+         <div class="card-body">
+   
+      <h5 class="card-title">
+          <a href="/find-one/<%=data.id  %> "><%= data.title %> </a>
+         </h5>
+  
+           <p class="card-text"> <%= data.article %> </p>
+         </div>
+       </div>
+
+  <% })  %> 
+
+<%}else{  %> 
+   <p style="text-align: center; font-size: 45px; color:red;"  >nothing to show</p>
+   <%} %> 
+
+<%-include('./components/footer')  %> 
+
